@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Identity Federation Lab</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f6f8;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .card {
+            background: white;
+            padding: 40px;
+            width: 400px;
+            border-radius: 12px;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+        }
+
+        button {
+            width: 100%;
+            padding: 14px;
+            margin-top: 15px;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .okta {
+            background-color: #00297A;
+            color: white;
+        }
+
+        .entra {
+            background-color: #0078D4;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+<div class="card">
+    <h1>Identity Portal</h1>
+
+    <p>Select an Identity Provider</p>
+
+    <button class="okta" onclick="oktaLogin()">
+        Okta SAML Sign In
+    </button>
+
+    <button class="entra" onclick="entraLogin()">
+        Microsoft Entra Sign In
+    </button>
+</div>
+
+<script>
+
+    function oktaLogin() {
+
+        const oktaSamlApp =
+            "https://login.isurutrader.com/app/exk1895ycixRKLrj3698/sso/saml/metadata";
+
+        window.location.href = oktaSamlApp;
+    }
+
+    function entraLogin() {
+
+        const entraAdmin =
+            "https://entra.microsoft.com/";
+
+        window.location.href = entraAdmin;
+    }
+
+</script>
+
+</body>
+</html>
