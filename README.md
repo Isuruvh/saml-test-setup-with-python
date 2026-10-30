@@ -23,7 +23,7 @@ This repository is an integration and learning tool, **not a production identity
 
 Configure the Okta app's ACS/Single sign-on URL to the public `/acs` URL if you intend to use this demo route. Update `OKTA_APP_EMBED_LINK` in `app.py` to your Okta application launch URL.
 
-### Microsoft Entra ID (SP-Initiated)
+### Microsoft Entra ID (SP-Initiated flow)
 
 1. Open the portal on the public HTTPS ngrok URL and select **Entra SAML Sign In**.
 2. `/login/entra` creates a SAML `AuthnRequest` and redirects the browser to `https://login.microsoftonline.com/<tenant-id>/saml2`. This is an SP-initiated flow.
